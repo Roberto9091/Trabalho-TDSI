@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Form Examples | Bootstrap Based Admin Template - Material Design</title>
+
+    <style rel="stylesheet">
+        body { background-image: url("/images/Teste2.png"); }
+    </style>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -24,14 +28,24 @@
     <!-- Sweet Alert Css -->
     <link href="../../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
+    <link href="../../plugins/waitme/waitme.css" rel="stylesheet" />
+
+    <link href="../../plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
     <!-- Custom Css -->
     <link href="../../css/style.css" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../../css/themes/all-themes.css" rel="stylesheet" />
+
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+
+
+    
+
 </head>
 
-<body class="theme-red">
+<body background-image:url("/images/fundo2.png")>
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -69,7 +83,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="../../index.html">BIBLIOTECA CENTRAL</a>
+                <a class="navbar-brand" href="../../index.html"><font color="WHITE">CAMPEONATO</font></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -97,9 +111,9 @@
                     <img src="../../images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                    <div class="email">john.doe@example.com</div>
-                    <div class="btn-group user-helper-dropdown">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font color="black">Roberto dos Santos</font></div>
+                    <div class="email" ><font color="black">robertosantos9091@gmail.com</font></div>
+                    <div class="btn-<group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
@@ -113,91 +127,63 @@
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
-                    <li class="header">NAVEGAÇÃO</li>
+                    <li class="header"><font color="black">NAVEGAÇÃO</font></li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">bookmarks</i>
-                            <span>Genero</span>
+                            <span>Campeonatos</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/genero/add">Adicionar</a>
+                                <a href="/campeonato/add">Adicionar</a>
                             </li>
                             <li>
-                                <a href="/genero">Listar</a>
+                                <a href="/campeonato">Listar</a>
                             </li>                            
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">print</i>
-                            <span>Editora</span>
+                            <span>Times</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/editora/add">Adicionar</a>
+                                <a href="/time/add">Adicionar</a>
                             </li>
                             <li>
-                                <a href="/editora">Listar</a>
+                                <a href="/time">Listar</a>
                             </li>                            
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">edit</i>
-                            <span>Autor</span>
+                            <span>Técnicos</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/autor/add">Adicionar</a>
+                                <a href="/tecnico/add">Adicionar</a>
                             </li>
                             <li>
-                                <a href="/autor">Listar</a>
+                                <a href="/tecnico">Listar</a>
                             </li>                            
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">book</i>
-                            <span>Livro</span>
+                            <span>Jogadores</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/livro/add">Adicionar</a>
+                                <a href="/jogador/add">Adicionar</a>
                             </li>
                             <li>
-                                <a href="/livro">Listar</a>
+                                <a href="/jogador">Listar</a>
                             </li>                            
                         </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">perm_identity</i>
-                            <span>Usuário</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="/usuario/add">Adicionar</a>
-                            </li>
-                            <li>
-                                <a href="/usuario">Listar</a>
-                            </li>                            
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">cached</i>
-                            <span>Emprestimo</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="">Adicionar</a>
-                            </li>
-                            <li>
-                                <a href="">Listar</a>
-                            </li>                            
-                        </ul>
-                    </li>                    
+                    </li>                   
                 </ul>
             </div>
             <!-- #Menu -->

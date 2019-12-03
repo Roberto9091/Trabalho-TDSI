@@ -1,0 +1,143 @@
+<%- include('../cabecalho') -%>
+<section class="content">
+    <div class="container-fluid">
+        <div class="block-header">
+            
+            <h2>JOGADOR</h2>
+        </div>
+        <!-- Horizontal Layout -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            CADASTRAR JOGADOR
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="nome">Nome</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" name="nome" id="nome" class="form-control"
+                                                placeholder="Nome do jogador">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="numero">Número</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" name="numero" id="numero" class="form-control"
+                                                placeholder="Número do Jogador">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="posicao">Posição</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                                <select name="posicao" class = "form-control show-tick" >
+                                                        <option value="Goleiro">Goleiro</option>
+                                                        <option value="Zagueiro">Zagueiro</option>
+                                                        <option value="Lateral Direito">Lateral Direito</option>
+                                                        <option value="Lateral Esquerdo">Lateral Esquerdo</option>
+                                                        <option value="Volante">Volante</option> 
+                                                        <option value="Meia">Meia</option>
+                                                        <option value="Atacante">Atacante</option>
+                                                        
+
+                                                </select>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="foto">Foto do Jogador</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="file" required name="foto" id="foto" class="form-control"
+                                                placeholder="Foto do Time">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="campeonato">Campeonato</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <select name="campeonato">
+                                                <% Campeonatos.forEach(function(campeonato){ %>
+                                                <option value="<%=campeonato._id%>"><%=campeonato.nome%></option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="time">Time</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <select name="time">
+                                                <% Times.forEach(function(time){ %>
+                                                <option value="<%=time._id%>"><%=time.nome%></option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="tecnicos">Técnico</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <select name="tecnicos" multiple>
+                                                <% Tecnicos.forEach(function(tecnico){ %>
+                                                <option value="<%=tecnico._id%>"><%=tecnico.nome%></option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                                    <button type="clear" class="btn btn-primary m-t-15 waves-effect">Limpar</button>
+                                    <button type="submit" class="btn btn-primary m-t-15 waves-effect">Cadastrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Horizontal Layout -->
+    </div>
+</section>
+<%- include('../rodape') -%>
